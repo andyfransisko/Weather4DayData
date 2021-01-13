@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <!-- BootStrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <title>Assessment - 4 Day Data Weather</title>
+</head>
+<body>
+
+<!--
+
+    [Contains information from 4-day Weather Forecast accessed on
+    11 January 2021 from nea.gov.sg which is made available under 
+    the terms of the Singapore Open Data Licence version 1.0 
+    https://data.gov.sg/dataset/weather-forecast ]*
+
+-->
+
+    <!-- Navbar from Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse float-right" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="#">Weather Data</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <center>
+            <h1>
+                4-day Weather Data
+            </h1>
+        </center>
+
+        <!-- Cards -->
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+
+            <!-- Cards 1 -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title" id="info1"></h5>
+                        <hr>
+                        <p class="card-text">
+                            Temperature <br>
+                            <span id="tempLow1"></span><br>
+                            <span id="tempHigh1"></span>
+                        </p>
+                        <hr>
+                        <p class="card-text">
+                            Humidity <br>
+                            <span id="humLow1"></span><br>
+                            <span id="humHigh1"></span>
+                        </p>
+                        <hr>
+                        <p class="card-text">
+                            Wind Speed<br>
+                            <span id="windSpeedLow1"></span><br>
+                            <span id="windSpeedHigh1"></span><br>
+                            <span id="windDirection1"></span>
+                        </p>
+                        <hr>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted" id = "date1"></small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cards 2 -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title" id="info2"></h5>
+                        <hr>
+                        <p class="card-text">
+                            Temperature <br>
+                            <span id="tempLow2"></span><br>
+                            <span id="tempHigh2"></span>
+                        </p>
+                        <hr>
+                        <p class="card-text">
+                            Humidity <br>
+                            <span id="humLow2"></span><br>
+                            <span id="humHigh2"></span>
+                        </p>
+                        <hr>
+                        <p class="card-text">
+                            Wind Speed<br>
+                            <span id="windSpeedLow2"></span><br>
+                            <span id="windSpeedHigh2"></span><br>
+                            <span id="windDirection2"></span>
+                        </p>
+                        <hr>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted" id = "date2"></small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cards 3 -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title" id="info3"></h5>
+                        <hr>
+                        <p class="card-text">
+                            Temperature <br>
+                            <span id="tempLow3"></span><br>
+                            <span id="tempHigh3"></span>
+                        </p>
+                        <hr>
+                        <p class="card-text">
+                            Humidity <br>
+                            <span id="humLow3"></span><br>
+                            <span id="humHigh3"></span>
+                        </p>
+                        <hr>
+                        <p class="card-text">
+                            Wind Speed<br>
+                            <span id="windSpeedLow3"></span><br>
+                            <span id="windSpeedHigh3"></span><br>
+                            <span id="windDirection3"></span>
+                        </p>
+                        <hr>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted" id = "date3"></small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cards 4 -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title" id="info4"></h5>
+                        <hr>
+                        <p class="card-text">
+                            Temperature <br>
+                            <span id="tempLow4"></span><br>
+                            <span id="tempHigh4"></span>
+                        </p>
+                        <hr>
+                        <p class="card-text">
+                            Humidity <br>
+                            <span id="humLow4"></span><br>
+                            <span id="humHigh4"></span>
+                        </p>
+                        <hr>
+                        <p class="card-text">
+                            Wind Speed<br>
+                            <span id="windSpeedLow4"></span><br>
+                            <span id="windSpeedHigh4"></span><br>
+                            <span id="windDirection4"></span>
+                        </p>
+                        <hr>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted" id = "date4"></small>
+                    </div>
+                </div>
+            </div>        
+        </div>
+    </div>
+
+<script>
+
+    //Today Date
+    let date = new Date();
+    date.setDate(date.getDate()-1);
+
+    //Format Date
+    function getDate(date){
+        //Get Year
+        var year = date.getFullYear();
+
+        //Get Month, Add 0 If Month < 10
+        var month = (1 + date.getMonth()).toString();
+        month = month.length > 1 ? month : '0' + month;
+
+        //Get Day Add 0 If Day < 10
+        var day = date.getDate().toString();
+        day = day.length > 1 ? day : '0' + day;
+    
+        //return value
+        return year + '-' + month + '-' + day;
+    }
+
+    //Today Formatted Date for API
+    let todayDate = getDate(date);
+
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var myObj = JSON.parse(this.responseText);
+
+            for(var i = 0; i < myObj.items[0].forecasts.length; i++){
+                //set Info
+                document.getElementById("info" + (i+1)).innerHTML = myObj.items[0].forecasts[i].forecast;
+
+                //set Temp Low    
+                document.getElementById("tempLow" + (i+1)).innerHTML = "Low : " + myObj.items[0].forecasts[i].temperature.low;
+
+                //set Temp High    
+                document.getElementById("tempHigh" + (i+1)).innerHTML = "High : " + myObj.items[0].forecasts[i].temperature.high;
+
+                //set Humidity Low
+                document.getElementById("humLow" + (i+1)).innerHTML = "Low : " + myObj.items[0].forecasts[i].relative_humidity.low;
+
+                //set Humidity High
+                document.getElementById("humHigh" + (i+1)).innerHTML = "Low : " + myObj.items[0].forecasts[i].relative_humidity.high;
+
+                //set Wind Speed Low
+                document.getElementById("windSpeedLow" + (i+1)).innerHTML = "Low : " + myObj.items[0].forecasts[i].wind.speed.low;
+                
+                //set Wind Speed Direction
+                document.getElementById("windDirection" + (i+1)).innerHTML = "Direction : " + myObj.items[0].forecasts[i].wind.direction;
+
+                //set Date
+                document.getElementById("date" + (i+1)).innerHTML = myObj.items[0].forecasts[i].date;
+            }
+           
+        }
+    };
+
+    //Link Varianel
+    var theLink = "https://api.data.gov.sg/v1/environment/4-day-weather-forecast?date_time="+ todayDate +"T00%3A00%3A00%2B08%3A00";
+
+    //GET API From Nea Gov
+    xmlhttp.open("GET", theLink, true);
+    xmlhttp.send();
+</script>
+
+    
+</body>
+</html>
